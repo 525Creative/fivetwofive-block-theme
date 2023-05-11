@@ -1,0 +1,45 @@
+# .gitignore file for WordPress that ignores everything except:
+#
+# - .gitignore
+# - everything in mu-plugins
+# - my-plugin
+# - my-theme (except for .sass-cache)
+#
+# based on https://gist.github.com/jdbartlett/444295
+/*
+!.gitignore
+!robots.txt
+!wp-content
+
+wp-content/*
+!wp-content/mu-plugins
+!wp-content/plugins
+!wp-content/themes
+
+wp-content/plugins/*
+#!wp-content/plugins/fivetwofive-work-post-type
+#!wp-content/plugins/fivetwofive-cta
+#!wp-content/plugins/fivetwofive-lp-post-type
+#!wp-content/plugins/fivetwofive-resource-post-type
+#!wp-content/plugins/fivetwofive-events-post-type
+
+wp-content/themes/*
+!wp-content/themes/fivetwofive
+
+# always ignore node_modules folders
+**/node_modules
+
+# always ignore these files
+sftp-config
+.DS_Store
+Thumbs.db
+.htaccess
+sftp-config.json
+.svn
+.cvs
+.sass-cache
+
+# always ignore files with these extensions
+*.sql
+*.bak
+*.swp
